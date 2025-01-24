@@ -7,9 +7,9 @@ require("dotenv").config();
 app.disable("x-powered-by");
 
 // Import Middleware
-const logger = require("./middleware/logger");
+const logger = require("./app/middleware/logger");
 app.use(logger);
-const connection = require("./middleware/db_connect");
+const connection = require("./app/middleware/db_connect");
 
 // Dashboard
 app.use("/", express.static(path.join(__dirname, "public")));
